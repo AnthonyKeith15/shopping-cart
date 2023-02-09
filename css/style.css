@@ -1,1 +1,87 @@
 /* TODO: Make it awesome */
+:root {
+  --primaryColor: #8d99ae;
+  --secondaryColor: #2b2d42;
+  --antiFlash: #edf2f4;
+  --accentColor: #ef767a;
+}
+
+body{
+  color: var(--antiFlash);
+  background-color: var(--primaryColor);
+}
+
+header {
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+ul {
+  width: 10vw;
+  display: inline-flex;
+  gap: 8px;
+}
+
+li a{
+  text-decoration: none;
+  color: var(--antiFlash);
+  border: 3px solid transparent;
+}
+
+li a:hover {
+  border: 3px solid var(--accentColor);
+}
+
+.deck{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+.col-1 .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.card header {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: 3rem;
+  padding: 2rem;
+  width: 75%;
+}
+
+.copy {
+  display: flex;
+  flex-direction: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+.copy ol {
+  background-color: var(--secondaryColor);
+}
+
+.card {
+  display: flex;
+}
+
+.deck.col-2 {
+  width: 40%;
+  background-color: var(--secondaryColor);
+}
+
+#cart-container {
+  width: 40%;
+  background-color: var(--secondaryColor);
+}
