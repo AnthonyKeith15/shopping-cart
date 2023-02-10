@@ -38,25 +38,31 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+// Done: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
+  // Done: suss out the item picked from the select list
   const selectElement = document.getElementById('items').value;
 
-  // TODO: get the quantity
+  // Done: get the quantity
   const quantity = document.getElementById('quantity').value;
 
-  // TODO: using those, add one item to the Cart
-  
-  // TODO: suss out the item picked from the select list
-  // TODO: get the quantity
-  // TODO: using those, add one item to the Cart
+  // Done: using those, add one item to the Cart
+  state.cart.addItem(selectElement, quantity);
 }
+let cartContents = document.getElementById('cartContents');
+let ul = document.createElement('ul');
+cartContents.appendChild(ul);
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// Done: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // TODO: Get the item and quantity from the form
-  // TODO: Add a new element to the cartContents div with that information
+  // Done: Get the item and quantity from the form
+  // Done: Add a new element to the cartContents div with that information
+  const itemSelected = document.getElementById('items').value;
+  const quantitySelected = document.getElementById('quantity').value;
+  let cartPreview = document.querySelector('#cartContents ul');
+  let li = document.createElement('li');
+  li.textContent = `Item: ${itemSelected}; Quantity ${quantitySelected}`
+  cartPreview.appendChild(li)
 }
 
 // Set up the "submit" event listener on the form.
